@@ -27,7 +27,7 @@ const NavBarHeader = styled.div`
   border-top: 1px solid rgba(0, 0, 0, 0.15);
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
 `;
-const LogoAndTitle = styled.div`
+const LogoAndTitle = styled(Link)`
   position: absolute;
   left: 50%;
   display: flex;
@@ -112,7 +112,7 @@ const HeaderComponent = () => {
         "창의 체험 부스",
       ],
       HeaderLinkUrl: [
-        "/",
+        "/introduce",
         "/online",
         "/online",
         "/online",
@@ -175,7 +175,7 @@ const HeaderComponent = () => {
     <NavBar>
       {CheckY() ? (
         <NavBarHeader>
-          <LogoAndTitle>
+          <LogoAndTitle to="/">
             <MainLogo src={mainLogo} alt="main_logo" />
             <Title>한양미래연구소</Title>
           </LogoAndTitle>
@@ -189,7 +189,7 @@ const HeaderComponent = () => {
         <NavBarBottom>
           <NavBarNav>
             <Item key="0" onMouseEnter={mouseEnter1} onMouseLeave={mouseLeave1}>
-              <MSLink to="/">
+              <MSLink to="/introduce">
                 <div>{data[0].HeaderTab}</div>
               </MSLink>
               <HeaderLink
