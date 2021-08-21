@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import MainSubTop from "Components/MainSubTop";
@@ -7,58 +7,73 @@ const Container = styled.section`
   background-color: white;
   height: 300px;
   display: flex;
-  overflow: hidden;
   position: relative;
-  width: 100vw;
+  margin: 100px 0 0 0;
 `;
 
-const Poster = styled(Link)`
-  display: table;
-  float: left;
+const SlideBox = styled.div`
+  width: calc(90vw - 400px);
   overflow: hidden;
+  border: 5px solid var(--main-color);
+`;
+
+const SlideList = styled.div`
+  display: table;
+  width: calc((90vw - 400px) / 5 * 8);
+`;
+
+const SlideContent = styled(Link)`
+  display: table-cell;
+  width: calc((90vw - 400px) / 5);
+  height: 300px;
   flex-direction: column;
   align-items: center;
   border: 2px solid rgba(0, 0, 0, 0.2);
   padding: 30px 20px;
-  transition: border 0.4s linear;
-  transition: box-shadow 0.4s linear;
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border: 2px solid #3b8188;
   }
-  width: 200px;
+  transform: translate3d(${(props) => props.imageCurrentNo}px, 0px, 0px);
+  transition: all 0.4s linear;
 `;
 
 const PosterImg = styled.img`
   width: 80px;
   height: 80px;
   margin-bottom: 70px;
-  display: table-cell;
 `;
 
-const Title = styled.div`
-  font-size: 13px;
-  font-weight: 550;
-`;
+const Title = styled.div``;
 
-const Arrow = styled.div`
+const RightArrow = styled.div`
   position: absolute;
-  top: 50%;
-  left: 90vw;
+  top: 45%;
+  left: 87vw;
   font-size: 50px;
   opacity: 0.4;
   color: #004c86;
-  transition: opacity 0.2s linear;
-  transition: font-size 0.2s linear;
+  transition: opacity 0.1s linear;
+  transition: font-size 0.1s linear;
   &:hover {
     opacity: 0.9;
     font-size: 60px;
   }
 `;
-
-const SlideContainer = styled.div`
-  width: 1600px;
-  overflow: hidden;
+const LeftArrow = styled.div`
+  position: absolute;
+  top: 45%;
+  left: 27vw;
+  font-size: 50px;
+  opacity: 0.4;
+  color: #004c86;
+  transition: opacity 0.1s linear;
+  transition: font-size 0.1s linear;
+  z-index: 1;
+  &:hover {
+    opacity: 0.9;
+    font-size: 60px;
+  }
 `;
 
 const EduList = ({ data }) => {
@@ -67,28 +82,37 @@ const EduList = ({ data }) => {
     mainTitle2: "교육 프로그램",
     subTitle: "The technology in education",
   };
+  const [imageCurrentNo, updateNo] = useState(0);
 
-  const sliding = () => {
-    return 1;
+  const slidingLeft = () => {
+    if (imageCurrentNo <= -200) updateNo(imageCurrentNo + 200);
+  };
+  const slidingRight = () => {
+    if (imageCurrentNo >= -500) updateNo(imageCurrentNo - 200);
   };
 
   return (
     <Container>
       <MainSubTop subTopData={subTopData} />
-      <SlideContainer>
-        {data.map((item) => (
-          <Poster>
-            <PosterImg
-              src={require(`../../${item.imgUrl}`).default}
-              alt="lecture"
-            />
-            <Title>{item.title}</Title>
-          </Poster>
-        ))}
-      </SlideContainer>
-      <Arrow onClick={sliding}>
-        <i className="fas fa-chevron-right"></i>
-      </Arrow>
+      <LeftArrow onClick={slidingLeft}>
+        <i className="fas fa-chevron-left" />
+      </LeftArrow>
+      <SlideBox>
+        <SlideList>
+          {data.map((item) => (
+            <SlideContent imageCurrentNo={imageCurrentNo} to="/online/maker1">
+              <PosterImg
+                src={require(`../../${item.imgUrl}`).default}
+                alt="lecture"
+              />
+              <Title>{item.title}</Title>
+            </SlideContent>
+          ))}
+        </SlideList>
+      </SlideBox>
+      <RightArrow onClick={slidingRight}>
+        <i className="fas fa-chevron-right" />
+      </RightArrow>
     </Container>
   );
 };

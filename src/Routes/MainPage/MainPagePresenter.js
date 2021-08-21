@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Slide from "Components/Slide";
 import img from "./people.jpg";
+import { WayCome } from "Components/EduDetailComponent";
 
 const Main = styled.div``;
 
@@ -84,6 +85,7 @@ const OnlinePresenter = ({ data }) => {
         <Arrow></Arrow>
       </BackImg>
       <Slide data={data} />
+      <WayCome />
     </Main>
   );
 };

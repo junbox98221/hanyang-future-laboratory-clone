@@ -6,7 +6,7 @@ const SubTopVariety = styled.div`
   flex-direction: column;
   justify-content: space-around;
   padding: 30px 50px 100px 130px;
-  width: 500px;
+  width: 400px;
 `;
 
 const SmallTitle = styled.span`
