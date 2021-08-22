@@ -7,6 +7,7 @@ const SubTopVariety = styled.div`
   justify-content: space-around;
   padding: 30px 50px 100px 130px;
   width: 400px;
+  height: 300px;
 `;
 
 const SmallTitle = styled.span`

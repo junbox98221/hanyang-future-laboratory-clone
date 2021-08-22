@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import MainSubTop from "Components/MainSubTop";
+import MainSubTop from "Components/MainPageComponent/MainSubTop";
 
 const Container = styled.section`
   background-color: white;
@@ -90,7 +90,7 @@ const EduList = ({ data }) => {
   const slidingRight = () => {
     if (imageCurrentNo >= -500) updateNo(imageCurrentNo - 200);
   };
-
+  console.log(data);
   return (
     <Container>
       <MainSubTop subTopData={subTopData} />
@@ -102,7 +102,7 @@ const EduList = ({ data }) => {
           {data.map((item) => (
             <SlideContent imageCurrentNo={imageCurrentNo} to="/online/maker1">
               <PosterImg
-                src={require(`../../${item.imgUrl}`).default}
+                src={require(`../../../${item.imgUrl}`).default}
                 alt="lecture"
               />
               <Title>{item.title}</Title>
