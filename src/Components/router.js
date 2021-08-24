@@ -4,6 +4,7 @@ import Header from "Components/Header";
 import MainPage from "Routes/MainPage";
 import Introduce from "Routes/Introduce";
 import Online from "Routes/Online";
+import Photo from "Routes/Photo";
 import EduDetail from "Routes/EduDetail";
 
 const Router = () => (
@@ -13,6 +14,7 @@ const Router = () => (
       <Route path="/" exact component={MainPage} />
       <Route path="/introduce" exact component={Introduce} />
       <Route path="/online" exact component={Online} />
+      <Route path="/photo" exact component={Photo} />
       <Route path="/online/:id" exact component={EduDetail} />
       <Redirect from="*" to="/" />
     </Switch>

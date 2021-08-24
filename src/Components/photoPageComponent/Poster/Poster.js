@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
-import img from "img/people.jpg";
+import img from "img/photoPage/photoPagePoster.jpg";
 
 const BackImg = styled.section`
   height: 450px;
@@ -29,28 +28,16 @@ const StringBox = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  color: white;
-  font-weight: 400;
   gap: 25px;
+  color: black;
 `;
 
 const Title = styled.h3`
-  font-size: 40px;
+  font-size: 50px;
 `;
 
 const SubTitle = styled.h5`
-  font-size: 18px;
-`;
-
-const Anchor = styled(Link)`
-  background: linear-gradient(to right, #33d9b2, #218c74);
-  padding: 20px 30px;
-  border-radius: 50px;
-  border: 2px solid white;
-  &:hover {
-    background: none;
-    border: 2px solid white;
-  }
+  font-size: 25px;
 `;
 
 const Arrow = styled.div`
@@ -68,12 +55,8 @@ const Poster = () => {
       <Arrow />
       <MainImg>
         <StringBox>
-          <Title>에리카에듀는</Title>
-          <Title>아이들의 미래를 지원합니다</Title>
-          <SubTitle>
-            새로운 기술과 이론을 스스로 학습해 나갈 수 있는 동기를 만들어줍니다
-          </SubTitle>
-          <Anchor to="/introduce">교육 소개 바로가기</Anchor>
+          <Title>사진 게시판</Title>
+          <SubTitle>아이들의 생생한 수업 모습을 담았습니다</SubTitle>
         </StringBox>
       </MainImg>
       <Arrow />

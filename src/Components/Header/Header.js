@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import "CSS/fonts.css";
-import mainLogo from "img/logo.PNG";
+import mainLogo from "img/logoCat.png";
 import HeaderLink from "Components/Header/HeaderLink";
 
 const NavBar = styled.div`
@@ -33,11 +33,10 @@ const LogoAndTitle = styled(Link)`
   display: flex;
   transform: translateX(-50%);
   align-items: center;
-  width: 300px;
 `;
 const MainLogo = styled.img`
-  width: 55px;
-  height: 60px;
+  width: 90px;
+  height: 90px;
 `;
 
 const Title = styled.div`
@@ -127,9 +126,7 @@ const HeaderComponent = () => {
       HeaderLinkUrl: ["/online", "/online", "/online"],
     },
     {
-      HeaderTab: "기업 소개",
-      HeaderLinkTab: ["기업 소개"],
-      HeaderLinkUrl: ["/online"],
+      HeaderTab: "교육 사진",
     },
     {
       HeaderTab: "교육 신청/문의",
@@ -213,7 +210,7 @@ const HeaderComponent = () => {
           </NavBarNav>
           <NavBarNav>
             <Item key="0" onMouseEnter={mouseEnter3} onMouseLeave={mouseLeave3}>
-              <MSLink to="/">
+              <MSLink to="/photo">
                 <div>{data[2].HeaderTab}</div>
               </MSLink>
               <HeaderLink

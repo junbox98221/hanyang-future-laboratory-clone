@@ -13,3 +13,7 @@
 mainpage 구현 애로사항
 
 1. useContext의 적절한 활용을 어떻게 할지
+
+---
+
+사진 저작권 확인 : 출철 splash

@@ -12,7 +12,7 @@ const Introduce = (props) => {
   return (
     <IntroduceComponent>
       <SubTop />
-      <Poster data={data} />
+      <Poster data={data} download />
     </IntroduceComponent>
   );
 };
