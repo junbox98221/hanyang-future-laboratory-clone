@@ -5,6 +5,7 @@ import MainPage from "Routes/MainPage";
 import Introduce from "Routes/Introduce";
 import Online from "Routes/Online";
 import Photo from "Routes/Photo";
+import Review from "Routes/EduReview";
 import EduDetail from "Routes/EduDetail";
 
 const Router = () => (
@@ -15,6 +16,7 @@ const Router = () => (
       <Route path="/introduce" exact component={Introduce} />
       <Route path="/online" exact component={Online} />
       <Route path="/photo" exact component={Photo} />
+      <Route path="/review" exact component={Review} />
       <Route path="/online/:id" exact component={EduDetail} />
       <Redirect from="*" to="/" />
     </Switch>

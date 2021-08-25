@@ -64,8 +64,14 @@ const Introduce = () => {
       price: "교육비용:1인10,000원~35,000원",
     },
   ]);
+  const [subTopData] = useState({
+    title: "교육소개",
+    smallTitle: "Education Introduction",
+    subTitle1: "4차산업혁명시대를 이끌어 나갈 인재를 양성하는",
+    subTitle2: "한양미래연구소의 교육 프로그램입니다.",
+  });
 
-  return <IntroducePresenter data={data} />;
+  return <IntroducePresenter data={data} subTopData={subTopData} />;
 };
 
 export default Introduce;
