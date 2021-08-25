@@ -89,7 +89,7 @@ const Item = styled.li`
 
 const MSLink = styled(Link)`
   &:hover {
-    color: #388285;
+    color: var(--main-color);
     ${(props) => (props.mouse = true)}
   }
   .prevent {
@@ -127,7 +127,7 @@ const HeaderComponent = () => {
       HeaderTab: "교육 사진",
     },
     {
-      HeaderTab: "교육 신청/문의",
+      HeaderTab: "교육 신청",
     },
   ]);
 
@@ -220,7 +220,7 @@ const HeaderComponent = () => {
           </NavBarNav>
           <NavBarNav>
             <Item key="0" onMouseEnter={mouseEnter4} onMouseLeave={mouseLeave4}>
-              <MSLink to="/">
+              <MSLink to="/eduForm">
                 <div>{data[3].HeaderTab}</div>
               </MSLink>
               <HeaderLink
