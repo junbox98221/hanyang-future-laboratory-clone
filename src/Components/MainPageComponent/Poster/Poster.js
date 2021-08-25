@@ -43,7 +43,7 @@ const SubTitle = styled.h5`
 `;
 
 const Anchor = styled(Link)`
-  background: linear-gradient(to right, #33d9b2, #218c74);
+  background: linear-gradient(to right, var(--sub-color), var(--main-color));
   padding: 20px 30px;
   border-radius: 50px;
   border: 2px solid white;
