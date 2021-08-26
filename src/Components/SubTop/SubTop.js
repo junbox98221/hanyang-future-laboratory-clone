@@ -7,7 +7,7 @@ const SubTop = styled.div`
   background-image: url(${img});
   background-position: center top;
   background-size: 50vw 450px;
-  height: 45vh;
+  height: 40vh;
   padding: 40px 0 150px 0;
   display: flex;
   flex-direction: column;

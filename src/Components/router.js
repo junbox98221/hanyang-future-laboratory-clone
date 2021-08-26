@@ -17,10 +17,6 @@ const Router = () => (
       <Route path="/photo" exact component={Photo} />
       <Route path="/review" exact component={Review} />
       <Route path="/eduForm" exact component={EduForm} />
-<<<<<<< HEAD
-=======
-      <Route path="/online/:id" exact component={EduDetail} />
->>>>>>> 5db9fa27b6d6ced1279c1986092dec4d045db45a
       <Redirect from="*" to="/" />
     </Switch>
   </BrowserRouter>

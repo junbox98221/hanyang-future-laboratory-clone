@@ -62,7 +62,6 @@ const ModalPara = styled.p`
 const Ul = styled.ul``;
 
 const Li = styled.li`
-<<<<<<< HEAD
   color: rgb(73, 73, 73);
   list-style: none;
   font-size: 12px;
@@ -73,19 +72,6 @@ const Li = styled.li`
     padding-right: 3px;
   }
 `;
-=======
-    color: rgb(73, 73, 73);
-    list-style: none;
-    font-size: 12px;
-    padding: 5px 0;
-    :before {
-      content: "·";
-      font-size: 12px;
-      padding-right: 3px;
-     }
-    }
-  `;
->>>>>>> 5db9fa27b6d6ced1279c1986092dec4d045db45a
 
 const Button = styled.button`
   width: 180px;
@@ -150,7 +136,7 @@ function Form() {
             className="input"
             required="required"
             type="text"
-            placeholder="예시) 한양중학교 1학년 1반 교실 (0층)"
+            placeholder="예시) 한양초등학교 1학년 1반 교실 (0층)"
           />
         </Section>
         <Section>
@@ -163,15 +149,13 @@ function Form() {
         <Section>
           <SubTitle>☑️ 교육 유형 선택</SubTitle>
           <select className="input">
-            <option value="청소년 캠프">청소년 캠프</option>
-            <option value="찾아가는 체험교실 (1회기)">
-              찾아가는 체험교실 (1회기)
-            </option>
-            <option value="청소년 동아리 (장회기)">
-              청소년 동아리 (장회기)
-            </option>
-            <option value="전문인 특강">전문인 특강</option>
-            <option value="체험 부스">체험 부스</option>
+            <option value="청소년 캠프">3D</option>
+            <option value="찾아가는 체험교실 (1회기)">VR</option>
+            <option value="청소년 동아리 (장회기)">AR</option>
+            <option value="전문인 특강">드론</option>
+            <option value="체험 부스">코딩</option>
+            <option value="체험 부스">로봇</option>
+            <option value="체험 부스">특강</option>
           </select>
         </Section>
         <Section>

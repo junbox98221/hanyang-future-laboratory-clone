@@ -71,11 +71,7 @@ const PhotoPresenter = () => {
       title: "[김⚪형님] 활동사진",
       info: "2021-08-23",
     },
-    {
-      src: "img/photoPage/4.jpg",
-      title: "[김⚪형님] 활동사진",
-      info: "2021-08-23",
-    },
+
     {
       src: "img/photoPage/5.jpg",
       title: "[김⚪형님] 활동사진",

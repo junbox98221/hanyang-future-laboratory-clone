@@ -96,8 +96,8 @@ const OnlinePresenter = ({
       </Form>
       <ButtonSection>
         <TypeButton onClick={AllCheck}>ALL</TypeButton>
-        <TypeButton onClick={MakerCheck}>메이커 융합 교육</TypeButton>
-        <TypeButton onClick={CodingCheck}>코딩 교육</TypeButton>
+        <TypeButton onClick={MakerCheck}>3D 체험</TypeButton>
+        <TypeButton onClick={CodingCheck}>로봇 만들기</TypeButton>
         <TypeButton onClick={SpecialCheck}>특강</TypeButton>
       </ButtonSection>
       <EduGridSection>
