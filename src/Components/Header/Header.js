@@ -89,7 +89,14 @@ const Item = styled.li`
 const MSLink = styled(Link)`
   &:hover {
     color: var(--main-color);
+<<<<<<< HEAD
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+=======
+    ${(props) => (props.mouse = true)}
+  }
+  .prevent {
+    background-color: blue;
+>>>>>>> 5db9fa27b6d6ced1279c1986092dec4d045db45a
   }
   padding: 10px;
   border-radius: 10px;
