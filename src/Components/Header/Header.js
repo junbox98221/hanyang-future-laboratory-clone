@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import "CSS/fonts.css";
 import mainLogo from "img/logoCat.png";
-import HeaderLink from "Components/Header/HeaderLink";
 
 const NavBar = styled.div`
   position: fixed;
@@ -90,11 +89,10 @@ const Item = styled.li`
 const MSLink = styled(Link)`
   &:hover {
     color: var(--main-color);
-    ${(props) => (props.mouse = true)}
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
-  .prevent {
-    background-color: blue;
-  }
+  padding: 10px;
+  border-radius: 10px;
 `;
 
 const HeaderComponent = () => {
@@ -172,7 +170,7 @@ const HeaderComponent = () => {
         <NavBarHeader>
           <LogoAndTitle to="/">
             <MainLogo src={mainLogo} alt="main_logo" />
-            <Title>한양미래연구소</Title>
+            <Title>에리카에듀</Title>
           </LogoAndTitle>
           <LoginAndJoin>
             <Login to="/">로그인</Login>
@@ -184,14 +182,9 @@ const HeaderComponent = () => {
         <NavBarBottom>
           <NavBarNav>
             <Item key="0" onMouseEnter={mouseEnter1} onMouseLeave={mouseLeave1}>
-              <MSLink to="/introduce">
+              <MSLink to="/online">
                 <div>{data[0].HeaderTab}</div>
               </MSLink>
-              <HeaderLink
-                HeaderLinkTab={data[0].HeaderLinkTab}
-                HeaderLinkUrl={data[0].HeaderLinkUrl}
-                hoverVar={hoverVar1}
-              />
             </Item>
           </NavBarNav>
           <NavBarNav>
@@ -199,11 +192,6 @@ const HeaderComponent = () => {
               <MSLink to="/review">
                 <div>{data[1].HeaderTab}</div>
               </MSLink>
-              <HeaderLink
-                HeaderLinkTab={data[1].HeaderLinkTab}
-                HeaderLinkUrl={data[1].HeaderLinkUrl}
-                hoverVar={hoverVar2}
-              />
             </Item>
           </NavBarNav>
           <NavBarNav>
@@ -211,11 +199,6 @@ const HeaderComponent = () => {
               <MSLink to="/photo">
                 <div>{data[2].HeaderTab}</div>
               </MSLink>
-              <HeaderLink
-                HeaderLinkTab={data[2].HeaderLinkTab}
-                HeaderLinkUrl={data[2].HeaderLinkUrl}
-                hoverVar={hoverVar3}
-              />
             </Item>
           </NavBarNav>
           <NavBarNav>
@@ -223,11 +206,6 @@ const HeaderComponent = () => {
               <MSLink to="/eduForm">
                 <div>{data[3].HeaderTab}</div>
               </MSLink>
-              <HeaderLink
-                HeaderLinkTab={data[3].HeaderLinkTab}
-                HeaderLinkUrl={data[3].HeaderLinkUrl}
-                hoverVar={hoverVar4}
-              />
             </Item>
           </NavBarNav>
         </NavBarBottom>

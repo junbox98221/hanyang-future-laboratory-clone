@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import img from "img/people.jpg";
+import img from "img/review.jpg";
 
 const BackImg = styled.section`
   height: 450px;
@@ -24,14 +24,16 @@ const MainImg = styled.div`
 `;
 
 const StringBox = styled.div`
-  height: 450px;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  padding: 10px;
   color: white;
   font-weight: 400;
   gap: 25px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
 `;
 
 const Title = styled.h3`
@@ -73,7 +75,7 @@ const Poster = () => {
           <SubTitle>
             새로운 기술과 이론을 스스로 학습해 나갈 수 있는 동기를 만들어줍니다
           </SubTitle>
-          <Anchor to="/introduce">교육 소개 바로가기</Anchor>
+          <Anchor to="/online">교육 소개 바로가기</Anchor>
         </StringBox>
       </MainImg>
       <Arrow />

@@ -17,7 +17,7 @@ const GridSection = styled.div`
 `;
 
 const Key = styled.div`
-  background-color: #40857d;
+  background-color: var(--main-color);
   color: white;
   display: flex;
   justify-content: center;

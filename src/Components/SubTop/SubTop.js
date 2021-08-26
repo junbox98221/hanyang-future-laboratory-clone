@@ -1,25 +1,24 @@
 import styled from "styled-components";
 import BarComponent from "Components/Bar";
+import img from "img/board.png";
 
 const SubTop = styled.div`
   position: relative;
-  background-color: #ecfec9;
+  background-image: url(${img});
+  background-position: center top;
+  background-size: 50vw 450px;
   height: 45vh;
-  padding: 50px 0;
+  padding: 40px 0 150px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  & > * {
-    margin: 14px 0;
-  }
   *:not(Box) {
     z-index: 2;
   }
 `;
 
 const SmallTitle = styled.span`
-  opacity: 0.4;
   font-size: 15px;
   font-weight: 900;
 `;
@@ -35,9 +34,6 @@ const Bar = styled(BarComponent)`
 `;
 
 const Paragraph = styled.div`
-  span {
-    padding: 3px 0;
-  }
   display: flex;
   flex-direction: column;
   align-items: center;

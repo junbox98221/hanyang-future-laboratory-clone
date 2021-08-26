@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import BarComponent from "Components/Bar";
 
-const Poster = styled(Link)`
+const Poster = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,7 +14,7 @@ const Poster = styled(Link)`
   transition: box-shadow 0.4s linear;
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border: 2px solid #3b8188;
+    border: 2px solid var(--main-color);
   }
 `;
 
@@ -35,7 +35,8 @@ const InfoSection = styled.div`
 `;
 
 const Type = styled.div`
-  background-color: #e8f9e4;
+  background-color: var(--main-color);
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,28 +50,6 @@ const Title = styled.div`
   font-weight: 550;
 `;
 
-const Ul = styled.ul``;
-
-const Li = styled.li`
-  list-style: none;
-  font-size: 13px;
-  padding: 5px 0;
-  :before {
-    content: "·";
-    font-size: 20px;
-    padding-right: 3px;
-  }
-  :last-child,
-  :nth-child(3) {
-    color: red;
-  }
-  :last-child {
-    :before {
-      content: "";
-    }
-  }
-`;
-
 const Bar = styled(BarComponent)`
   width: 20px;
   height: 2px;
@@ -78,7 +57,7 @@ const Bar = styled(BarComponent)`
 
 const EduList = ({ imgUrl, type, title, target, result, cost1, cost2 }) => {
   return (
-    <Poster to="/online/maker1">
+    <Poster>
       <PosterImg src={require(`../../${imgUrl}`).default} alt="lecture" />
       <InfoSection>
         <Type>
@@ -86,12 +65,6 @@ const EduList = ({ imgUrl, type, title, target, result, cost1, cost2 }) => {
         </Type>
         <Title>{title}</Title>
         <Bar />
-        <Ul>
-          <Li>{target}</Li>
-          <Li>{result}</Li>
-          <Li>{cost1}</Li>
-          <Li>&nbsp;&nbsp;{cost2}</Li>
-        </Ul>
       </InfoSection>
     </Poster>
   );

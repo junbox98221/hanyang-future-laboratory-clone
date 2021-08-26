@@ -62,17 +62,16 @@ const ModalPara = styled.p`
 const Ul = styled.ul``;
 
 const Li = styled.li`
-    color: rgb(73, 73, 73);
-    list-style: none;
+  color: rgb(73, 73, 73);
+  list-style: none;
+  font-size: 12px;
+  padding: 5px 0;
+  :before {
+    content: "·";
     font-size: 12px;
-    padding: 5px 0;
-    :before {
-      content: "·";
-      font-size: 12px;
-      padding-right: 3px;
-     }
-    }
-  `;
+    padding-right: 3px;
+  }
+`;
 
 const Button = styled.button`
   width: 180px;

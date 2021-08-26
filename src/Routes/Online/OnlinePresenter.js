@@ -32,7 +32,7 @@ const Input = styled.input`
 const EduGridSection = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-template-rows: repeat(2, 500px);
+  grid-template-rows: repeat(2, 400px);
   grid-gap: 30px;
 `;
 
@@ -63,7 +63,7 @@ const TypeButton = styled.button`
   font-weight: 500;
   :focus {
     color: white;
-    background-color: #388281;
+    background-color: var(--main-color);
   }
   :hover {
     border: 1px solid var(--main-color);
@@ -112,9 +112,6 @@ const OnlinePresenter = ({
               imgUrl={item.imgUrl}
               type={item.type}
               title={item.title}
-              target={item.target}
-              result={item.result}
-              cost={item.cost}
             />
           ))}
       </EduGridSection>

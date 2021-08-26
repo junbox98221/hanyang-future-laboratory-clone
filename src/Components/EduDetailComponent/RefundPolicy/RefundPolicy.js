@@ -34,7 +34,7 @@ const Li = styled.div`
   margin: 30px;
   line-height: 20px;
   i {
-    color: #5c9e9e;
+    color: var(--main-color);
     font-size: 1.7rem;
   }
 `;

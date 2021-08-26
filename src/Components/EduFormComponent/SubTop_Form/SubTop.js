@@ -1,10 +1,13 @@
 import styled from "styled-components";
 import BarComponent from "Components/Bar";
+import img from "img/form.jpg";
 
 const SubTop = styled.div`
-  background-color: #ecfec9;
+  background-image: url(${img});
+  background-position: center center;
+  background-size: 50vw 450px;
   height: 45vh;
-  padding: 50px 0;
+  padding: 50px 0 130px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

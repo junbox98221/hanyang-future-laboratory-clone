@@ -17,7 +17,7 @@ const LiTitle = styled.div`
   font-size: 1rem;
   margin: 20px 0px;
   i {
-    color: #40857d;
+    color: var(--main-color);
   }
 `;
 
